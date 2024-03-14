@@ -26,7 +26,7 @@ Vous pouvez configurer votre `CrowBot Remade` en ouvrant simplement votre termin
 npm i
 ```
 Après cela, allez dans `config.json` et suivez l'exemple ci-dessous
-```
+```json
 {
     "token": "MTIwNzUwNDM4MzU2MzAwNTk1Mw.GvtXoR.YBabSqmjLVWHuJWe2LH2DH_PucRQbU5hrm****", //Token Bot
     "color": "#2B2D31", //Color Embed
