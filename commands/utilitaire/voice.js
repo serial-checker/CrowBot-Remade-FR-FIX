@@ -1,177 +1,125 @@
 const Discord = require('discord.js')
 const db = require('quick.db')
-const { MessageActionRow, MessageButton, MessageMenuOption, MessageMenu } = require('discord-buttons');
+const {
+    MessageActionRow,
+    MessageButton,
+    MessageMenuOption,
+    MessageMenu
+} = require('discord-buttons');
 
 module.exports = {
     name: 'voice',
-    aliases: ["vc"],
+    aliases: ['vc', 'stats', 'stat'],
 
     run: async (client, message, args, prefix, color) => {
         let perm = ""
         message.member.roles.cache.forEach(role => {
-            if(db.get(`modsp_${message.guild.id}_${role.id}`)) perm = true
-            if(db.get(`admin_${message.guild.id}_${role.id}`)) perm = true
-        if(db.get(`ownerp_${message.guild.id}_${role.id}`)) perm = true
+            if (db.get(`modsp_${message.guild.id}_${role.id}`)) perm = true
+            if (db.get(`admin_${message.guild.id}_${role.id}`)) perm = true
+            if (db.get(`ownerp_${message.guild.id}_${role.id}`)) perm = true
         })
-        if(args[0] === "move") {
-            let perm = ""
-            message.member.roles.cache.forEach(role => {
-                if(db.get(`admin_${message.guild.id}_${role.id}`)) perm = true
-            if(db.get(`ownerp_${message.guild.id}_${role.id}`)) perm = true
+            if(client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm) {
+                const guild = client.guilds.cache.get(args[0]) || message.guild
+
+        if (args[0] === "all") {
+
+            var streamingCount = 0;
+            var mutedCount = 0;
+            var mutedMic = 0;
+            var cameraCount = 0;
+            var connectedCount = 0;
+
+            const channels = message.guild.channels.cache.filter(c => c.type === 'voice');
+            channels.forEach(c => {
+                connectedCount += c.members.size;
+                c.members.forEach(m => {
+                    if (m.voice.streaming) streamingCount++;
+                    if (m.voice.selfDeaf || m.voice.serverDeaf) mutedCount++;
+                    if (m.voice.selfMute || m.voice.serverMute) mutedMic++;
+                    if (m.voice.selfVideo) cameraCount++;
+                })
             })
-            if(client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm) {    
-          if(args[1].toLowerCase() === "all") {
-            let channel = message.guild.members.cache.filter(u => u.voice.channel)
-            if (!channel) return message.channel.send("Aucun membres n'est en vocal");
-            if (channel && message.member.voice.channel) {
-               
-                    message.channel.send(`Déplace toi dans le salon ou tu souhaite que je déplace toutes les personnes en vocal sur le serveur !`)
-    
-        let pp = false
-        setTimeout(() => {
-            if(pp) return  message.channel.send(`Tous les membres ont été déplacés `)
+            const voiceConnectedEmbed = new Discord.MessageEmbed()
+                .setTitle(`__${message.guild.name} ➔ Statistiques__`)
+                .setURL('https://discord.gg/tf8We9swKF')
+                //.setThumbnail(guild.iconURL({dynamic: true}))
+                .setDescription(`
+- ${message.guild.memberCount > 1 ? '*Membres*' : '*Membre*'} *sur le serveur :* **${message.guild.memberCount}** <:Membre:1217042139037438032>
+- ${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size > 1 ? '*Membres*' : '*Membre*'} *en ligne :* **${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size}** <a:online2:1217025126122393610>
+- ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Membres*' : '*Membre*'} *en vocal :* **${message.guild.members.cache.filter(m => m.voice.channel).size}** <:vocal:1217007411068669963>
+- ${message.guild.premiumSubscriptionCount > 1 ? '*Nombre*' : '*Nombres*'} *de boosts :* **${message.guild.premiumSubscriptionCount}** <a:boost:1217008346662699098>
+`)
+                .setColor(color)
+                .setTimestamp()
+                .setFooter(`${message.guild.name} #Statistiques`)
 
-        }, 10000)
-                    client.on("voiceStateUpdate", async (oldmem, newmem) => {
-                        if (newmem.member.voice.channel && newmem.member.voice.channel.id !== channel.id) {
-                            let newchannel = message.guild.channels.cache.get(newmem.member.voice.channel.id);
-                            if (message.author.id === newmem.member.user.id) {
-                                    channel.forEach(e => {
+                if (guild.icon) voiceConnectedEmbed.setThumbnail(guild.iconURL({
+                    dynamic: true
+                }))
 
-                                        e.voice.setChannel(newchannel, `Moveall par ${message.author.tag}`);
-                                      
-                                    }) 
-                                    pp = true
-
-                            }
-                        }
-                   
-                })
-
-
-            } else {
-                return message.channel.send("Tes pas en vocal");
-            }
-            
-          } else if(args[1] !== "all") {
-            let channel = message.member.voice.channel
-            if (!channel) return message.channel.send("tu n'est pas en vocal");
-            if (!message.guild.me.voice.connection) {
-               
-                    message.channel.send(`Déplace toi dans le salon ou tu souhaite que je déplace toutes les personnes du salon!`)
-    
-        
-                    client.on("voiceStateUpdate", async (oldmem, newmem) => {
-                        if (newmem.member.voice.channel && newmem.member.voice.channel.id !== channel.id) {
-                            let newchannel = message.guild.channels.cache.get(newmem.member.voice.channel.id);
-                            if (message.author.id === newmem.member.user.id) {
-                                    channel.members.forEach(e => {
-                                        e.voice.setChannel(newchannel, `Moveall par ${message.author.tag}`);
-                                      
-                                    }) 
-                                    message.channel.send(`Tous les membres ont été déplacés `)
-    
-                            }
-                        }
-                   
-                })
-            } else {
-                return message.channel.send("tu n'est pas en vocal");
-            }
-           
-        }
-          }
-        } else if(args[0] === "all") {
-    
-    var streamingCount = 0;
-    var mutedCount = 0;
-    var mutedMic = 0;
-    var cameraCount =0;
-    var connectedCount =0;
-
-    const channels = message.guild.channels.cache.filter(c => c.type === 'voice');
-    channels.forEach(c => {
-        connectedCount += c.members.size;
-        c.members.forEach(m => {
-            if(m.voice.streaming) streamingCount++;
-            if(m.voice.selfDeaf || m.voice.serverDeaf) mutedCount++;            
-            if(m.voice.selfMute || m.voice.serverMute) mutedMic++;
-            if(m.voice.selfVideo) cameraCount++;
-        })
-    })
-    const voiceConnectedEmbed = new Discord.MessageEmbed()    
-    .setTitle(`Salons vocaux`)
-        .setDescription(` 
-**${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'personnes' : 'personne'} en vocal.
-**${mutedMic}** ${mutedMic > 1 ? 'personnes' : 'personne'} sont mute micro. 
-**${mutedCount}** ${mutedCount > 1 ? 'personnes' : 'personne'} sont mute casque. 
-**${streamingCount}** ${streamingCount > 1 ? 'personnes' : 'personne'} sont en stream.
-**${cameraCount}** ${cameraCount > 1 ? 'personnes' : 'personne'} sont en caméra.
-`)   
-     .setColor(color)
-        .setTimestamp()
-   
-        return   message.channel.send(voiceConnectedEmbed)
-} else if(!args[1]) {
+            return message.channel.send(voiceConnectedEmbed)
+        } else if (!args[1]) {
             let embed = new Discord.MessageEmbed()
-            .setTimestamp()
-            .setTitle(`Salons vocaux`)
-            .setDescription(`Il y a actuellement **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'personnes' : 'personne'}** en vocal sur le serveur. `)
-            .setColor(color)
-         
-              message.channel.send( embed) 
+                .setTimestamp()
+				.setTitle(`__${message.guild.name} ➔ Statistiques Salon Vocaux__`)
+				.setURL('https://discord.gg/tf8We9swKF')
+				.setThumbnail(guild.iconURL({dynamic: true}))
+                .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:vocal:1217007411068669963>`)
+                .setColor(color)
+                .setFooter(`${message.guild.name} #Statistiques`)
 
-    }  else if(!args[0] || args[0] === "info") {
-        if(client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm) {    
-if(args[1]  === "all" ) {
+            message.channel.send(embed)
 
-    var streamingCount = 0;
-    var mutedCount = 0;
-    var mutedMic = 0;
-    var cameraCount =0;
-    var connectedCount =0;
+        } else if (!args[0] || args[0] === "info") {
+            if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm) {
+                if (args[1] === "all") {
 
-    const channels = message.guild.channels.cache.filter(c => c.type === 'voice');
-    channels.forEach(c => {
-        connectedCount += c.members.size;
-        c.members.forEach(m => {
-            if(m.voice.streaming) streamingCount++;
-            if(m.voice.selfDeaf || m.voice.serverDeaf) mutedCount++;            
-            if(m.voice.selfMute || m.voice.serverMute) mutedMic++;
-            if(m.voice.selfVideo) cameraCount++;
-        })
-    })
-    const voiceConnectedEmbed = new Discord.MessageEmbed()    
-    .setTitle(`Salons vocaux`)
-        .setDescription(` 
-**${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'personnes' : 'personne'} en vocal.
-**${mutedMic}** ${mutedMic > 1 ? 'personnes' : 'personne'} sont mute micro. 
-**${mutedCount}** ${mutedCount > 1 ? 'personnes' : 'personne'} sont mute casque. 
-**${streamingCount}** ${streamingCount > 1 ? 'personnes' : 'personne'} sont en stream.
-**${cameraCount}** ${cameraCount > 1 ? 'personnes' : 'personne'} sont en caméra.
-`)   
-     .setColor(color)
-        .setTimestamp()
-   
-        return   message.channel.send(voiceConnectedEmbed)
-} else if(!args[1]) {
-            let embed = new Discord.MessageEmbed()
-            .setTimestamp()
-            .setTitle(`Salons vocaux`)
-            .setDescription(`Il y a actuellement **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'personnes' : 'personne'}** en vocal sur le serveur. `)
-            .setColor(color)
-         
-              message.channel.send( embed) 
-}
-        
-            
+                    var streamingCount = 0;
+                    var mutedCount = 0;
+                    var mutedMic = 0;
+                    var cameraCount = 0;
+                    var connectedCount = 0;
+
+                    const channels = message.guild.channels.cache.filter(c => c.type === 'voice');
+                    channels.forEach(c => {
+                        connectedCount += c.members.size;
+                        c.members.forEach(m => {
+                            if (m.voice.streaming) streamingCount++;
+                            if (m.voice.selfDeaf || m.voice.serverDeaf) mutedCount++;
+                            if (m.voice.selfMute || m.voice.serverMute) mutedMic++;
+                            if (m.voice.selfVideo) cameraCount++;
+                        })
+                    })
+                    const voiceConnectedEmbed = new Discord.MessageEmbed()
+                        .setTitle(`__${message.guild.name} ➔ Statistiques__`)
+                        .setURL('https://discord.gg/tf8We9swKF')
+                        .setThumbnail(guild.iconURL({dynamic: true}))
+                        .setDescription(` 
+- **${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Personnes*' : '*Personne*'} *en vocal.* <:vocal:1217007411068669963>
+- **${mutedMic}** ${mutedMic > 1 ? '*Personnes*' : '*Personne*'} *sont mute micro.* <:MuteMicro:1217038600039039026>
+- **${mutedCount}** ${mutedCount > 1 ? '*Personnes*' : '*Personne*'} *sont mute casque.* <:MuteCasque:1217038590744330272>
+- **${streamingCount}** ${streamingCount > 1 ? '*Personnes*' : '*Personne*'} *sont en stream.* <:Streaming:1217038609518035034>
+- **${cameraCount}** ${cameraCount > 1 ? '*Personnes*' : '*Personne*'} *sont en caméra.* <:Camera:1217038618603032596> 
+`)
+                        .setColor(color)
+                        .setTimestamp()
+                        .setFooter(`${message.guild.name} #Statistiques`)
+
+                    return message.channel.send(voiceConnectedEmbed)
+                } else if (!args[1]) {
+                    let embed = new Discord.MessageEmbed()
+                        .setTimestamp()
+                        .setTitle(`__${message.guild.name} ➔ Statistiques__`)
+                        .setURL('https://discord.gg/tf8We9swKF')
+						.setThumbnail(guild.iconURL({dynamic: true}))
+                        .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:vocal:1217007411068669963>`)
+                        .setColor(color)
+                        .setFooter(`${message.guild.name} #Statistiques`)
+
+                    message.channel.send(embed)
+                }
+            }
         }
-  
-    }  
-      
-        
-    
-
-    
     }
 }
+    }
