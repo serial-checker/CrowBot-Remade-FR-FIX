@@ -196,7 +196,7 @@ module.exports = {
 						}
 						if (button.id === message.id + "off") {
 							msg.delete()
-							on()
+							off()
 
 						}
 						if (button.id === message.id + "max") {
@@ -212,7 +212,7 @@ module.exports = {
 						}
 						if (button.id === message.id + "2off") {
 							msg.delete()
-							on()
+							off()
 
 						}
 						if (button.id === message.id + "2max") {
