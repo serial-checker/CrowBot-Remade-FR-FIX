@@ -28,7 +28,7 @@ let activity = {
 }
 module.exports = {
     name: 'botconfig',
-    aliases: ["setprofil"],
+    aliases: ["setprofil", "config", "setup"],
     run: async (client, message, args, prefix, color) => {
 
         if (client.config.owner.includes(message.author.id)) {
