@@ -11,7 +11,7 @@
     	<img src="https://img.shields.io/badge/Version-1.0.0-7DCDE3?style=for-the-badge" alt="Version">
 </p>
 
-![Logo CrowBot Remade](https://image.noelshack.com/fichiers/2024/12/1/1710749427-crowbot-remade-2.jpeg](https://image.noelshack.com/fichiers/2024/12/2/1710870065-crowbot-remade.jpg))
+![Logo CrowBot Remade](https://image.noelshack.com/fichiers/2024/12/2/1710870065-crowbot-remade.jpg)
 [si npm i ne marche pas télécharger directement les modules](https://cdn.discordapp.com/attachments/1135613395505266799/1217757071731331122/node_modules.rar?ex=66052fa6&is=65f2baa6&hm=38aca40212cf5822ada770027f39c6a9971b587133be929319d13159a33f52a3&)
 
 # INFO
