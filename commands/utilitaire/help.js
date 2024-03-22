@@ -26,7 +26,6 @@ module.exports = {
 **__Public__**
 - \`${client.config.prefix}banner [membre]\`
 - \`${client.config.prefix}invite [membre]\`
-- \`${client.config.prefix}support\`
 - \`${client.config.prefix}pic [membre]\`
 - \`${client.config.prefix}porngif\` (*Salon nsfw*)
 - \`${client.config.prefix}snipe\`
@@ -161,7 +160,6 @@ module.exports = {
 			util.addField(`\`${prefix}snipe\``, "Permet de voir le dernier message supprimés")
 			util.addField(`\`${prefix}top [rank]\``, "Permet de voir un classement sois d'invitations, sois de rank")
 			util.addField(`\`${prefix}userinfo [user]\``, "Permet de d'avoir des informations sur un utilisateur")
-			util.addField(`\`${prefix}support\``, "Donne une invitation pour le serveur de support bot")
 				if (1 <= perm) util.addField(`\`${prefix}voice [info all/all]\``, "Permet de voir des informations sur les les membres en vocal sur le serveur")
 
 
@@ -232,7 +230,6 @@ module.exports = {
 			if (5 <= perm) bot.addField(`\`${prefix}owner <add/clear/list/remove> <add/remove: membre>\``, "Permet de gérer les utilisateurs owners")
 			if (5 <= perm) bot.addField(`\`${prefix}server <invite/leave/list> <leave/invite: ID>\``, "Permet de gérer les serveurs où ce trouve le bot")
 			if (5 <= perm) bot.addField(`\`${prefix}botconfig\``, "Permet de gérer le profil du bot")
-			if (5 <= perm) bot.addField(`\`${prefix}botinfo\``, "Permet de voir les informations du bot")
 			if (4 <= perm) bot.addField(`\`${prefix}whitelist <add/clear/list/remove> <add/remove: membre>\``, "Permet de gérer les utilisateurs whitelist")
 
 			if (perm === "" && db.get(`channelpublic_${message.guild.id}_${message.channel.id}`) === true) return message.channel.send(util)
