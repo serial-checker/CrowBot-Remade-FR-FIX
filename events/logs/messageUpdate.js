@@ -14,8 +14,8 @@ module.exports = async (client, oldMessage, newMessage) => {
 		.setColor(color)
 		.setAuthor(`Message modifié`)
 		.setDescription(`${oldMessage.author} À modifié sont message dans <#${oldMessage.channel.id}>`)
-		.addField(`Ancien message :`, `${oldMessage.content}ㅤ`)
-		.addField(`Nouveau message :`, `${newMessage.content}ㅤ`)
+		.addField(`Ancien message :`, `${oldMessage.content} **(embed)**`)
+		.addField(`Nouveau message :`, `${newMessage.content} **(embed)**`)
 		.setFooter(`${client.config.name}`)
 		.setTimestamp())
 }
