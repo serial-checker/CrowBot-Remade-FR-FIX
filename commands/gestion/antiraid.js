@@ -23,7 +23,7 @@ const message = require('../../events/rank/message');
 
 module.exports = {
 	name: 'antiraid',
-	aliases: ["secur"],
+	aliases: ['secur', 'protection'],
 	run: async (client, message, args, prefix, color) => {
 
 		let perm = ""
@@ -108,7 +108,8 @@ module.exports = {
 				db.set(`bot_${message.guild.id}`, null);
 				db.set(`antideco_${message.guild.id}`, null);
 				db.set(`antitoken_${message.guild.id}`, null)
-				db.get(`crealimit_${message.guild.id}`, null)
+				db.set(`crealimit_${message.guild.id}`, null)
+				db.set(`link_${message.guild.id}`, null)
 				return msggg.edit("Tout modules d'antiraid ont été désactivées")
 			})
 		}
@@ -164,7 +165,7 @@ module.exports = {
 				db.set(`antidecowl_${message.guild.id}`, true)
 
 				db.set(`antitoken_${message.guild.id}`, true)
-				db.get(`crealimit_${message.guild.id}`, true)
+				db.set(`crealimit_${message.guild.id}`, true)
 				db.set(`crealimittemps_${message.guild.id}`, ms("1d"))
 
 				return msggg.edit("Tout modules d'antiraid ont été activées en max")
@@ -2729,7 +2730,7 @@ module.exports = {
 				.setEmoji("5️⃣")
 			let embed2 = new Discord.MessageEmbed()
 			embed2.setTitle(`Configuration des modules d'antiraid`)
-				.setColor(`${client.config.color}`)
+				.setColor(color)
 				.setDescription(`
         **1️ ・ Bannissement de membre** (*Comprends aussi les explusions de membre*)
         **Actif:** ${onoff(ban)}
@@ -2875,7 +2876,7 @@ module.exports = {
 				.setLabel("▶")
 			let embed2 = new Discord.MessageEmbed()
 			embed2.setTitle(`Configuration des modules d'antiraid`)
-				.setColor(`${client.config.color}`)
+				.setColor(color)
 				.setDescription(`
         **1️ ・ Modification du serveur**
         **Actif:** ${onoff(update)}
@@ -2993,7 +2994,7 @@ module.exports = {
 
 			let embed = new Discord.MessageEmbed();
 			embed.setTitle(`Configuration des modules d'antiraid`)
-				.setColor(`${client.config.color}`)
+				.setColor(color)
 				.setDescription(`
         **1️ ・ Création de webhook**
         **Actif:** ${onoff(webhookCreate)}
