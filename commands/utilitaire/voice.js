@@ -44,10 +44,10 @@ module.exports = {
                 .setURL('https://github.com/Serial-Checker')
                 //.setThumbnail(guild.iconURL({dynamic: true}))
                 .setDescription(`
-- ${message.guild.memberCount > 1 ? '*Membres*' : '*Membre*'} *sur le serveur :* **${message.guild.memberCount}** <:Membre:1217042139037438032>
-- ${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size > 1 ? '*Membres*' : '*Membre*'} *en ligne :* **${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size}** <a:online2:1217025126122393610>
-- ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Membres*' : '*Membre*'} *en vocal :* **${message.guild.members.cache.filter(m => m.voice.channel).size}** <:vocal:1217007411068669963>
-- ${message.guild.premiumSubscriptionCount > 1 ? '*Nombre*' : '*Nombres*'} *de boosts :* **${message.guild.premiumSubscriptionCount}** <a:boost:1217008346662699098>
+- ${message.guild.memberCount > 1 ? '*Membres*' : '*Membre*'} *sur le serveur :* **${message.guild.memberCount}** <:serial_membre:1220474644004339713>
+- ${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size > 1 ? '*Membres*' : '*Membre*'} *en ligne :* **${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size}** <a:serial_terre:1220445710223151217>
+- ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Membres*' : '*Membre*'} *en vocal :* **${message.guild.members.cache.filter(m => m.voice.channel).size}** <:serial_vocal:1217007411068669963>
+- ${message.guild.premiumSubscriptionCount > 1 ? '*Nombre*' : '*Nombres*'} *de boosts :* **${message.guild.premiumSubscriptionCount}** <a:serial_boost:1217008346662699098>
 `)
                 .setColor(color)
                 .setTimestamp()
@@ -64,7 +64,7 @@ module.exports = {
 				.setTitle(`__${message.guild.name} ➔ Statistiques Salon Vocaux__`)
 				.setURL('https://github.com/Serial-Checker')
 				.setThumbnail(guild.iconURL({dynamic: true}))
-                .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:vocal:1217007411068669963>`)
+                .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:serial_vocal:1217007411068669963>`)
                 .setColor(color)
                 .setFooter(`${message.guild.name} #Statistiques`)
 
@@ -95,11 +95,11 @@ module.exports = {
                         .setURL('https://github.com/Serial-Checker')
                         .setThumbnail(guild.iconURL({dynamic: true}))
                         .setDescription(` 
-- **${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Personnes*' : '*Personne*'} *en vocal.* <:vocal:1217007411068669963>
-- **${mutedMic}** ${mutedMic > 1 ? '*Personnes*' : '*Personne*'} *sont mute micro.* <:MuteMicro:1217038600039039026>
-- **${mutedCount}** ${mutedCount > 1 ? '*Personnes*' : '*Personne*'} *sont mute casque.* <:MuteCasque:1217038590744330272>
-- **${streamingCount}** ${streamingCount > 1 ? '*Personnes*' : '*Personne*'} *sont en stream.* <:Streaming:1217038609518035034>
-- **${cameraCount}** ${cameraCount > 1 ? '*Personnes*' : '*Personne*'} *sont en caméra.* <:Camera:1217038618603032596> 
+- **${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Personnes*' : '*Personne*'} *en vocal.* <:serial_vocal:1217007411068669963>
+- **${mutedMic}** ${mutedMic > 1 ? '*Personnes*' : '*Personne*'} *sont mute micro.* <:serial_mutemicro:1217038600039039026>
+- **${mutedCount}** ${mutedCount > 1 ? '*Personnes*' : '*Personne*'} *sont mute casque.* <:serial_mutecasque:1217038590744330272>
+- **${streamingCount}** ${streamingCount > 1 ? '*Personnes*' : '*Personne*'} *sont en stream.* <:serial_streaming:1217038609518035034>
+- **${cameraCount}** ${cameraCount > 1 ? '*Personnes*' : '*Personne*'} *sont en caméra.* <:serial_camera:1217038618603032596> 
 `)
                         .setColor(color)
                         .setTimestamp()
@@ -112,7 +112,7 @@ module.exports = {
                         .setTitle(`__${message.guild.name} ➔ Statistiques__`)
                         .setURL('https://github.com/Serial-Checker')
 						.setThumbnail(guild.iconURL({dynamic: true}))
-                        .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:vocal:1217007411068669963>`)
+                        .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:serial_vocal:1217007411068669963>`)
                         .setColor(color)
                         .setFooter(`${message.guild.name} #Statistiques`)
 
