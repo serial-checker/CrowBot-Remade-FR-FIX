@@ -13,8 +13,8 @@ module.exports = (client, message) => {
 	if (logschannel) logschannel.send(new Discord.MessageEmbed()
         .setColor(color)
 		.setAuthor(`Message supprimé`)
-		.setDescription(`Message supprimé dans <#${message.channel.id}> par ${message.author}`)
-		.addField(`Message Supprimé :`, `${message.content} ㅤ`)
+		.setDescription(`dans <#${message.channel.id}> par ${message.author}`)
+		.addField(`Message Supprimé :`, `${message.content} **(embed)**`)
 		.setFooter(`${client.config.name}`)
 		.setTimestamp())
 }
