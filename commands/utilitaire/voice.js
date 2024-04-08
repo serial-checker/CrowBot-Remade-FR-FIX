@@ -41,7 +41,7 @@ module.exports = {
             })
             const voiceConnectedEmbed = new Discord.MessageEmbed()
                 .setTitle(`__${message.guild.name} ➔ Statistiques__`)
-                .setURL('https://discord.gg/tf8We9swKF')
+                .setURL('https://github.com/Serial-Checker')
                 //.setThumbnail(guild.iconURL({dynamic: true}))
                 .setDescription(`
 - ${message.guild.memberCount > 1 ? '*Membres*' : '*Membre*'} *sur le serveur :* **${message.guild.memberCount}** <:Membre:1217042139037438032>
@@ -62,7 +62,7 @@ module.exports = {
             let embed = new Discord.MessageEmbed()
                 .setTimestamp()
 				.setTitle(`__${message.guild.name} ➔ Statistiques Salon Vocaux__`)
-				.setURL('https://discord.gg/tf8We9swKF')
+				.setURL('https://github.com/Serial-Checker')
 				.setThumbnail(guild.iconURL({dynamic: true}))
                 .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:vocal:1217007411068669963>`)
                 .setColor(color)
@@ -92,7 +92,7 @@ module.exports = {
                     })
                     const voiceConnectedEmbed = new Discord.MessageEmbed()
                         .setTitle(`__${message.guild.name} ➔ Statistiques__`)
-                        .setURL('https://discord.gg/tf8We9swKF')
+                        .setURL('https://github.com/Serial-Checker')
                         .setThumbnail(guild.iconURL({dynamic: true}))
                         .setDescription(` 
 - **${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Personnes*' : '*Personne*'} *en vocal.* <:vocal:1217007411068669963>
@@ -110,7 +110,7 @@ module.exports = {
                     let embed = new Discord.MessageEmbed()
                         .setTimestamp()
                         .setTitle(`__${message.guild.name} ➔ Statistiques__`)
-                        .setURL('https://discord.gg/tf8We9swKF')
+                        .setURL('https://github.com/Serial-Checker')
 						.setThumbnail(guild.iconURL({dynamic: true}))
                         .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:vocal:1217007411068669963>`)
                         .setColor(color)
