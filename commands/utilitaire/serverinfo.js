@@ -51,7 +51,7 @@ module.exports = {
 				.addField(`Nombre D'utilisateur(s) En Vocal <:serial_vocal:1217007411068669963> :`, `__${guild.members.cache.filter(m => m.voice.channel).size}__`, true)
 				.addField(`Nombre D'utilisateur(s) Sans Rôle :x: :`, `__${NoRoles}__`, true)
 				.addField(`Nombre De Boost(s) <a:serial_boost:1217008346662699098> :`, `__${guild.premiumSubscriptionCount}__`, true)
-				.addField(`Nombre De Booster(s) <a:serial_nitroboost:1217195480052666378> :`, `${boosters}`, true)
+				//.addField(`Nombre De Booster(s) <a:serial_nitroboost:1217195480052666378> :`, `${boosters}`, true)
 				.addField(`Nombre De Rôle(s) :scroll: :`, `__${guild.roles.cache.size}__`, true)
 				.addField(`Nombre De Salon(s) <a:serial_chat:1220445576467058739> :`, `__${guild.channels.cache.size}__`, true)
 				.addField(`Nombre D'émoji(s) Total :package: :`, `__${guild.emojis.cache.size}__`, true)
