@@ -61,7 +61,7 @@ module.exports = {
 						return message.channel.send(`<@${member.id}> n'est pas whitlist`)
 					}
 					db.delete(`wlmd_${message.guild.id}_${member.user.id}`)
-					message.channel.send(`<@${member.id}> n'est plus whitlist`)
+					message.channel.send(`<@${member.id}> n'est plus whitelist`)
 				}
 			} else if (args[0] === "list") {
 
