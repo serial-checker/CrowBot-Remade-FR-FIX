@@ -31,10 +31,10 @@ Après cela, allez dans `config.json` et suivez l'exemple ci-dessous
     "token": "MTIwNzUwNDM4MzU2MzAwNTk1Mw.GvtXoR.YBabSqmjLVWHuJWe2LH2DH_PucRQbU5hrm****", //Token Bot
     "color": "#2B2D31", //Color Embed
     "prefix": "+", //Prefix
-    "name": "CrowBot Remade", //Footer
-    "defaultjoinmessage": "{user} vient de rejoindre. Il a été invité par **{inviter:name}** qui a désormais **{invite} invitations** !", //Pas Touche
-    "defaultleavemessage": "{user} vient de quitter. Il avais été invité par **{inviter:name}** qui a désormais **{invite} invitations** ", //Pas Touche
-    "defaultLevelmessage": "**{user}** vient de passer au level **{level}** bravo à lui !", //Pas Touche
+    "name": "CrowBot Remade", //Footer Embed
+    "defaultjoinmessage": "{user} vient de rejoindre. Il a été invité par **{inviter:name}** qui a désormais **{invite} invitations** !",
+    "defaultleavemessage": "{user} vient de quitter. Il avais été invité par **{inviter:name}** qui a désormais **{invite} invitations** ",
+    "defaultLevelmessage": "**{user}** vient de passer au level **{level}** bravo à lui !",
     "owner": ["1133246357960921158"] //Owner ID Discord 
 }
 ```
