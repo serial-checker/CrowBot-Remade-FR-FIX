@@ -232,6 +232,7 @@ module.exports = {
 			if (5 <= perm) bot.addField(`\`${prefix}owner <add/clear/list/remove> <add/remove: membre>\``, "Permet de gérer les utilisateurs owners")
 			if (5 <= perm) bot.addField(`\`${prefix}server <invite/leave/list> <leave/invite: ID>\``, "Permet de gérer les serveurs où ce trouve le bot")
 			if (5 <= perm) bot.addField(`\`${prefix}botconfig\``, "Permet de gérer le profil du bot")
+			if (5 <= perm) bot.addField(`\`${prefix}botinfo\``, "Permet de voir les informations du bot")
 			if (4 <= perm) bot.addField(`\`${prefix}whitelist <add/clear/list/remove> <add/remove: membre>\``, "Permet de gérer les utilisateurs whitelist")
 
 			if (perm === "" && db.get(`channelpublic_${message.guild.id}_${message.channel.id}`) === true) return message.channel.send(util)
