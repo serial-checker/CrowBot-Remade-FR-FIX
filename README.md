@@ -45,7 +45,7 @@ node index.js
 
 # Credits
 ```
-Créée Par Wassim (aucun réseaux à partager)
+Créée Par Wassim (aucun réseaux à partager).
 Leak Par WhoisBaby Github : https://github.com/whoisbaby
 Remade & Fix By serial_checker Github : https://github.com/Serial-Checker
 ```
