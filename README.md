@@ -32,15 +32,18 @@ Après cela, allez dans `config.json` et suivez l'exemple ci-dessous
     "color": "#2B2D31", //Color Embed
     "prefix": "+", //Prefix
     "name": "CrowBot Remade", //Footer Embed
-    "defaultjoinmessage": "{user} vient de rejoindre. Il a été invité par **{inviter:name}** qui a désormais **{invite} invitations** !",
-    "defaultleavemessage": "{user} vient de quitter. Il avais été invité par **{inviter:name}** qui a désormais **{invite} invitations** ",
-    "defaultLevelmessage": "**{user}** vient de passer au level **{level}** bravo à lui !",
+    "defaultjoinmessage": "{user} vient de rejoindre. Il a été invité par **{inviter:name}** qui a désormais **{invite} invitations** !", //à Modifié si vous voulez
+    "defaultleavemessage": "{user} vient de quitter. Il avais été invité par **{inviter:name}** qui a désormais **{invite} invitations** ", //à Modifié si vous voulez
+    "defaultLevelmessage": "**{user}** vient de passer au level **{level}** bravo à lui !", //à Modifié si vous voulez
     "owner": ["1133246357960921158"] //Owner ID Discord 
 }
 ```
-Après avoir fait tout cela, vous pouvez enfin lancer le CrowBot Remade en tapant la commande suivante dans un `Invite de commandes` :
+Après avoir fait tout cela, vous pouvez enfin lancer le CrowBot Remade en ouvrant un `Invite de commandes` et enfin taper la commande suivante `node index.js`
 ```
-node index.js
+# Support
+```
+Si vous avez vraiment besoin d'aide après tout ces consignes merci de rejoinre le serveur discord dédié à ce script spécifique
+Lien Du Serveur Discord : https://discord.gg/9ZfB8m5E88
 ```
 
 # Credits
@@ -50,7 +53,9 @@ Leak Par WhoisBaby Github : https://github.com/whoisbaby
 Remade & Fix By serial_checker Github : https://github.com/Serial-Checker
 ```
 
-### Contribution;
-###### Toutes les contributions sont acceptées, ouvrez simplement un ticket/pull request et je vous répondrai dès que possible.
-###### Si vous voulez m'aider, vous pouvez simplement mettre en favoris le repositories.
+# Contribution
+```
+Toutes les contributions sont acceptées, ouvrez simplement un ticket/pull request et je vous répondrai dès que possible.
+Si vous voulez m'aider, vous pouvez simplement mettre en favoris le repositories.
+```
  
