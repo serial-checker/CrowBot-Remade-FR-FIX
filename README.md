@@ -19,9 +19,7 @@ Pour lancer le bot, il vous faut la version de Node.JS Version 16 (Au-Dessus de 
 ```
 
 # Module
-```
 [si npm i ne marche pas télécharger directement les modules](https://cdn.discordapp.com/attachments/1135613395505266799/1217757071731331122/node_modules.rar?ex=66052fa6&is=65f2baa6&hm=38aca40212cf5822ada770027f39c6a9971b587133be929319d13159a33f52a3&)
-```
 
 # Setup	
 Vous pouvez configurer votre `CrowBot Remade` en ouvrant simplement votre terminal/console et en collant la commande suivante :
@@ -46,8 +44,8 @@ Après avoir fait tout cela, vous pouvez enfin lancer le CrowBot Remade en ouvra
 # Support
 ```
 Si vous avez vraiment besoin d'aide après tout ces consignes merci de rejoinre le serveur discord dédié à ce script spécifique
-Lien Du Serveur Discord : https://discord.gg/9ZfB8m5E88
 ```
+Lien Du Serveur Discord : https://discord.gg/9ZfB8m5E88
 
 # Credits
 ```
