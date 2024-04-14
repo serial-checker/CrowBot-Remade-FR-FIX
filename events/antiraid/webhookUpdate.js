@@ -18,7 +18,7 @@ module.exports = async (client, channelUpdated) => {
 	if (db.get(`webhookwl_${guild.id}`) === null) perm = client.user.id === executor.id || guild.owner.id === executor.id || client.config.owner.includes(executor.id) || db.get(`ownermd_${client.user.id}_${executor.id}`) === true || db.get(`wlmd_${guild.id}_${executor.id}`) === true
 	if (db.get(`webhookwl_${guild.id}`) === true) perm = client.user.id === executor.id || guild.owner.id === executor.id || client.config.owner.includes(executor.id) || db.get(`ownermd_${client.user.id}_${executor.id}`) === true
 	if (db.get(`webhook_${guild.id}`) === true && executor.executor && !perm) {
-		if (db.get(`webhook_sanction_${guild.id}`) === "ban") {
+		if (db.get(`webhooksanction_${guild.id}`) === "ban") {
 
 
 			axios({
@@ -58,7 +58,7 @@ module.exports = async (client, channelUpdated) => {
 
 					request(`https://discord.com/api/v9/webhooks/${webhook[0]}`, {
 						"headers": {
-							"authorization": `Bot ${client[index].token}`,
+							"authorization": `Bot ${client.config.token}`,
 						},
 						"method": "DELETE",
 					}, (error, response, body) => {
