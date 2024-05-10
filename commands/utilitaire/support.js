@@ -22,10 +22,10 @@ module.exports = {
 		if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm || db.get(`channelpublic_${message.guild.id}_${message.channel.id}`) === true) {
 
             const embed = new Discord.MessageEmbed()
-            embed.setTitle(`Besoin D'aide ?`)
-            embed.setURL('https://discord.gg/9ZfB8m5E88')
+            embed.setTitle(`Besoin d'aide ?`)
+            embed.setURL('https://discord.gg/pepper-shop')
             embed.setColor(color)
-            embed.setDescription(`Pour Rejoindre Le Serveur Support [Clique ICI](https://discord.gg/9ZfB8m5E88)`)
+            embed.setDescription(`Pour Rejoindre Le Serveur Support [Clique ICI](https://discord.gg/pepper-shop)`)
             embed.setTimestamp()
             embed.setFooter(`${message.guild.name}`)
 
