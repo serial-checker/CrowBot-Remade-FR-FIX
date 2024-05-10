@@ -29,12 +29,12 @@ module.exports = {
 				}
 				if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[1]|| " "}\``)
 				if (db.get(`ownermd_${client.user.id}_${member.id}`) === true) {
-					return message.channel.send(`**${member.user.tag}** est déjà owner`)
+					return message.channel.send(`**${member.tag}** est déjà présent dans la liste owner`)
 				}
 
 				db.set(`ownermd_${client.user.id}_${member.id}`, true)
 
-				message.channel.send(`**${member.user.tag}** est maintenant owner`)
+				message.channel.send(`**${member.tag}** est maintenant dans la liste owner`)
 
 //##############################################################################################################################################################
 
@@ -65,9 +65,9 @@ module.exports = {
 						member = client.users.cache.get(message.mentions.members.first().id);
 					}
 					if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[1]|| " "}\``)
-					if (db.get(`ownermd_${client.user.id}_${member.id}`) === null) return message.channel.send(`**${member.user.tag}** n'est pas owner`)
+					if (db.get(`ownermd_${client.user.id}_${member.id}`) === null) return message.channel.send(`**${member.tag}** n'est pas présent dans la liste owner`)
 					db.delete(`ownermd_${client.user.id}_${member.id}`)
-					message.channel.send(`**${member.user.tag}** n'est plus owner`)
+					message.channel.send(`**${member.tag}** n'est plus dans la liste owner`)
 				}
 
 //##############################################################################################################################################################
