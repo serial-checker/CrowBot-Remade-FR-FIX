@@ -9,7 +9,7 @@ const {
 
 module.exports = {
 	name: 'renew',
-	aliases: ["nuke", "purge"],
+	aliases: ['nuke'],
 
 	run: async (client, message, args, prefix, color) => {
 
