@@ -14,6 +14,8 @@ module.exports = {
 
 		if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true) {
 
+//##############################################################################################################################################################
+
 			if (args[0] === "add") {
 				let member = message.guild.members.cache.get(message.author.id);
 				if (args[1]) {
@@ -32,15 +34,21 @@ module.exports = {
 				db.set(`wlmd_${message.guild.id}_${member.user.id}`, true)
 
 				message.channel.send(`**${member.user.tag}** est maintenant dans la whitelist`)
+
+//##############################################################################################################################################################
+
 			} else if (args[0] === "clear") {
 				let tt = await db.all().filter(data => data.ID.startsWith(`wlmd_${message.guild.id}`));
-				message.channel.send(`${tt.length === undefined||null ? 0:tt.length} ${tt.length > 1 ? "personnes ont été supprimées ":"personne a été supprimée"} de la whitelist`)
+				message.channel.send(`**${tt.length === undefined||null ? 0:tt.length}** ${tt.length > 1 ? "personnes ont été supprimées ":"personne a été supprimée"} de la whitelist`)
 
 				let ttt = 0;
 				for (let i = 0; i < tt.length; i++) {
 					db.delete(tt[i].ID);
 					ttt++;
 				}
+
+//##############################################################################################################################################################
+
 			} else if (args[0] === "remove") {
 
 				if (args[1]) {
@@ -61,6 +69,9 @@ module.exports = {
 					db.delete(`wlmd_${message.guild.id}_${member.user.id}`)
 					message.channel.send(`**${member.user.tag}** n'est plus présent dans la whitelist`)
 				}
+
+//##############################################################################################################################################################
+
 			} else if (args[0] === "list") {
 
 				let money = db.all().filter(data => data.ID.startsWith(`wlmd_${message.guild.id}`)).sort((a, b) => b.data - a.data)
