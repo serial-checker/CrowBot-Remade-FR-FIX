@@ -20,28 +20,28 @@ module.exports = {
 					if (!role) return message.channel.send(`Aucun rôle trouvé pour \`${args[2]}\``)
 					if (db.get(`modsp_${message.guild.id}_${role.id}`)) return message.channel.send(`Ce rôle a déjà la permissions mods !`)
 					db.set(`modsp_${message.guild.id}_${role.id}`, true)
-					message.react("✅")
+					message.channel.send("La permission **Mods** à bien été définie !")
 				} else if (args[1].toLowerCase() === "admin") {
 					let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[2])
 					if (!role) return message.channel.send(`Aucun rôle trouvé pour \`${args[2]}\``)
 					if (db.get(`admin_${message.guild.id}_${role.id}`)) return message.channel.send(`Ce rôle a déjà la permissions admin !`)
 					db.set(`admin_${message.guild.id}_${role.id}`, true)
-					message.react("✅")
+					message.channel.send("La permission **Admin** à bien été définie !")
 				} else if (args[1].toLowerCase() === "owner") {
 					let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[2])
 					if (!role) return message.channel.send(`Aucun rôle trouvé pour \`${args[2]}\``)
 					if (db.get(`ownerp_${message.guild.id}_${role.id}`)) return message.channel.send(`Ce rôle a déjà la permissions owner !`)
 					db.set(`ownerp_${message.guild.id}_${role.id}`, true)
-					message.react("✅")
+					message.channel.send("La permission **Owner** à bien été définie !")
 				} else if (args[1].toLowerCase() === "giveaway") {
 					let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[2])
 					if (!role) return message.channel.send(`Aucun rôle trouvé pour \`${args[2]}\``)
 					if (db.get(`gvwp_${message.guild.id}_${role.id}`)) return message.channel.send(`Ce rôle a déjà la permissions giveaway !`)
 					db.set(`gvwp_${message.guild.id}_${role.id}`, true)
-					message.react("✅")
+					message.channel.send("La permission **Giveaway** à bien été définie !")
 				}
 			}
-		} else if (args[0] === "del") {
+		} else if (args[0] === "remove") {
 			if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true) {
 
 				if (args[1].toLowerCase() === "mods") {
@@ -49,25 +49,25 @@ module.exports = {
 					if (!role) return message.channel.send(`Aucun rôle trouvé pour \`${args[2]}\``)
 					if (!db.get(`modsp_${message.guild.id}_${role.id}`)) return message.channel.send(`Ce rôle n'a pas la permissions mods !`)
 					db.delete(`modsp_${message.guild.id}_${role.id}`)
-					message.react("✅")
+					message.channel.send("La permission **Mods** à bien été retiré du rôle !")
 				} else if (args[1].toLowerCase() === "admin") {
 					let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[2])
 					if (!role) return message.channel.send(`Aucun rôle trouvé pour \`${args[2]}\``)
 					if (!db.get(`admin_${message.guild.id}_${role.id}`)) return message.channel.send(`Ce rôle n'a pas la permissions admin !`)
 					db.delete(`admin_${message.guild.id}_${role.id}`)
-					message.react("✅")
+					message.channel.send("La permission **Admin** à bien été retiré du rôle !")
 				} else if (args[1].toLowerCase() === "owner") {
 					let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[2])
 					if (!role) return message.channel.send(`Aucun rôle trouvé pour \`${args[2]}\``)
 					if (!db.get(`ownerp_${message.guild.id}_${role.id}`)) return message.channel.send(`Ce rôle n'a pas la permissions owner !`)
 					db.delete(`ownerp_${message.guild.id}_${role.id}`)
-					message.react("✅")
+					message.channel.send("La permission **Owner** à bien été retiré du rôle !")
 				} else if (args[1].toLowerCase() === "giveaway") {
 					let role = message.mentions.roles.first() || message.guild.roles.cache.get(args[2])
 					if (!role) return message.channel.send(`Aucun rôle trouvé pour \`${args[2]}\``)
 					if (!db.get(`gvwp_${message.guild.id}_${role.id}`)) return message.channel.send(`Ce rôle n'a pas la permissions giveaway !`)
 					db.delete(`gvwp_${message.guild.id}_${role.id}`)
-					message.react("✅")
+					message.channel.send("La permission **Giveaway** à bien été retiré du rôle !")
 				}
 			}
 		} else if (args[0] === "clear") {
@@ -95,7 +95,7 @@ module.exports = {
 				db.delete(gvwc[i].ID);
 				gvwsc++;
 			}
-			message.react("✅")
+			message.channel.send("Les permissions ont toute été supprimé de tous les rôles affiliés !")
 		} else if (!args[0]) {
 			let perm = ""
 			message.member.roles.cache.forEach(role => {
