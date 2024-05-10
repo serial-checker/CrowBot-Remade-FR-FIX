@@ -11,7 +11,7 @@ const cooldown = {}
 
 module.exports = {
     name: 'unban',
-    aliases: [],
+    aliases: ['pardon'],
     run: async (client, message, args, prefix, color) => {
 
         /*#############################################################UNBAN ALL#####################################################################################*/
