@@ -12,7 +12,7 @@ const {
 
 module.exports = {
 	name: 'help',
-	aliases: [],
+	aliases: ['aide','tuto'],
 	run: async (client, message, args, prefix, color) => {
 		if (args[0] === "all") {
 
