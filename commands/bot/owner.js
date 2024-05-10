@@ -14,6 +14,8 @@ module.exports = {
 
 		if (client.config.owner.includes(message.author.id)) {
 
+//##############################################################################################################################################################
+
 			if (args[0] === "add") {
 				let member = client.users.cache.get(message.author.id);
 				if (args[1]) {
@@ -27,15 +29,18 @@ module.exports = {
 				}
 				if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[1]|| " "}\``)
 				if (db.get(`ownermd_${client.user.id}_${member.id}`) === true) {
-					return message.channel.send(`<@${member.id}> est déjà owner`)
+					return message.channel.send(`**${member.user.tag}** est déjà owner`)
 				}
 
 				db.set(`ownermd_${client.user.id}_${member.id}`, true)
 
-				message.channel.send(`<@${member.id}> est maintenant owner`)
+				message.channel.send(`**${member.user.tag}** est maintenant owner`)
+
+//##############################################################################################################################################################
+
 			} else if (args[0] === "clear") {
 				let tt = await db.all().filter(data => data.ID.startsWith(`ownermd_${client.user.id}`));
-				message.channel.send(`${tt.length === undefined||null ? 0:tt.length} ${tt.length > 1 ? "personnes ont été supprimées ":"personne a été supprimée"} des owners`)
+				message.channel.send(`**${tt.length === undefined||null ? 0:tt.length}** ${tt.length > 1 ? "personnes ont été supprimées ":"personne a été supprimée"} des owners`)
 
 
 				let delowner = 0;
@@ -43,6 +48,9 @@ module.exports = {
 					db.delete(tt[i].ID);
 					delowner++;
 				}
+
+//##############################################################################################################################################################
+
 			} else if (args[0] === "remove") {
 
 				if (args[1]) {
@@ -57,10 +65,13 @@ module.exports = {
 						member = client.users.cache.get(message.mentions.members.first().id);
 					}
 					if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[1]|| " "}\``)
-					if (db.get(`ownermd_${client.user.id}_${member.id}`) === null) return message.channel.send(`<@${member.id}> n'est pas owner`)
+					if (db.get(`ownermd_${client.user.id}_${member.id}`) === null) return message.channel.send(`**${member.user.tag}** n'est pas owner`)
 					db.delete(`ownermd_${client.user.id}_${member.id}`)
-					message.channel.send(`<@${member.id}> n'est plus owner`)
+					message.channel.send(`**${member.user.tag}** n'est plus owner`)
 				}
+
+//##############################################################################################################################################################
+
 			} else if (args[0] === "list") {
 
 
