@@ -7,10 +7,9 @@ const {
 	MessageMenu
 } = require('discord-buttons');
 
-
 module.exports = {
 	name: 'whitelist',
-	aliases: ["wl"],
+	aliases: ['wl'],
 	run: async (client, message, args, prefix, color) => {
 
 		if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true) {
@@ -28,15 +27,14 @@ module.exports = {
 				}
 				if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[1]|| " "}\``)
 				if (db.get(`wlmd_${message.guild.id}_${member.user.id}`) === true) {
-					return message.channel.send(`<@${member.id}> est déjà whitelist`)
+					return message.channel.send(`**${member.user.tag}** est déjà présent dans la whitelist`)
 				}
 				db.set(`wlmd_${message.guild.id}_${member.user.id}`, true)
 
-				message.channel.send(`<@${member.id}> est maintenant dans la whitelist`)
+				message.channel.send(`**${member.user.tag}** est maintenant dans la whitelist`)
 			} else if (args[0] === "clear") {
 				let tt = await db.all().filter(data => data.ID.startsWith(`wlmd_${message.guild.id}`));
 				message.channel.send(`${tt.length === undefined||null ? 0:tt.length} ${tt.length > 1 ? "personnes ont été supprimées ":"personne a été supprimée"} de la whitelist`)
-
 
 				let ttt = 0;
 				for (let i = 0; i < tt.length; i++) {
@@ -58,13 +56,12 @@ module.exports = {
 					}
 					if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[1]|| " "}\``)
 					if (db.get(`wlmd_${message.guild.id}_${member.user.id}`) === null) {
-						return message.channel.send(`<@${member.id}> n'est pas whitlist`)
+						return message.channel.send(`**${member.user.tag}** n'est pas présent dans la whitlist`)
 					}
 					db.delete(`wlmd_${message.guild.id}_${member.user.id}`)
-					message.channel.send(`<@${member.id}> n'est plus whitelist`)
+					message.channel.send(`**${member.user.tag}** n'est plus présent dans la whitelist`)
 				}
 			} else if (args[0] === "list") {
-
 
 				let money = db.all().filter(data => data.ID.startsWith(`wlmd_${message.guild.id}`)).sort((a, b) => b.data - a.data)
 
@@ -83,7 +80,6 @@ module.exports = {
 					)
 					.setFooter(`${page}/${Math.ceil(money.length === 0?1:money.length === 0?1:money.length / 5)} • ${client.config.name}`)
 					.setColor(color)
-
 
 				message.channel.send(embed).then(async tdata => {
 					if (money.length > 5) {
@@ -118,7 +114,6 @@ module.exports = {
 									.setFooter(`1/${Math.ceil(money.length === 0?1:money.length / 5)} • ${client.config.name}`)
 									.setColor(color)
 
-
 							})
 							// message.channel.send(embeds)
 						}, 60000 * 5)
@@ -137,7 +132,6 @@ module.exports = {
 								if (p0 === undefined || p1 === undefined) {
 									return
 								}
-
 
 								embed.setDescription(money
 										.filter(x => message.guild.members.cache.get(x.ID.split('_')[2]))
@@ -165,7 +159,6 @@ module.exports = {
 									return
 								}
 
-
 								embed.setDescription(money
 										.filter(x => message.guild.members.cache.get(x.ID.split('_')[2]))
 										.map((m, i) => `${i + 1}) <@${message.guild.members.cache.get(m.ID.split('_')[2]).id}> (${message.guild.members.cache.get(m.ID.split('_')[2]).id})`)
@@ -178,12 +171,8 @@ module.exports = {
 							}
 						})
 					}
-
 				})
-
 			}
 		}
-
-
-	}
+    }
 }
