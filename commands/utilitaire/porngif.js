@@ -6,7 +6,7 @@ const superagent = require('superagent')
 
 module.exports = {
 	name: 'porngif',
-	aliases: ["pgif"],
+	aliases: ['pgif','nsfw','porn'],
 	run: async (client, message, args, prefix, color) => {
 
 		let perm = ""
