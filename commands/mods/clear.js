@@ -19,7 +19,7 @@ function unban(message, user, authorcooldown) {
 };
 module.exports = {
 	name: 'clear',
-	aliases: [],
+	aliases: ['purge'],
 
 	run: async (client, message, args, prefix, color) => {
 
