@@ -9,7 +9,7 @@ const {
 
 module.exports = {
 	name: 'pic',
-	aliases: ["pp"],
+	aliases: ['pp','avatar'],
 	run: async (client, message, args, prefix, color) => {
 		let perm = ""
 		message.member.roles.cache.forEach(role => {
