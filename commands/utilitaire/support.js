@@ -10,7 +10,7 @@ const {
 
 module.exports = {
 	name: 'support',
-	aliases: ['aide'],
+	aliases: [],
 	run: async (client, message, args, prefix, color) => {
 
 		let perm = ""
