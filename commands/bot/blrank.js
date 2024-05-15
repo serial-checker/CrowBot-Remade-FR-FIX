@@ -15,6 +15,8 @@ module.exports = {
 
 		if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true) {
 
+//##############################################################################################################################################################
+
 			if (args[0] === "add") {
 				let member = client.users.cache.get(message.author.id);
 				if (args[1]) {
@@ -28,7 +30,7 @@ module.exports = {
 				}
 				if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[1]|| " "}\``)
 				if (db.get(`blrankmd_${client.user.id}_${member.id}`) === true) {
-					return message.channel.send(`${member.username} est déjà dans la Blacklist Rank`)
+					return message.channel.send(`**${member.tag}** est déjà dans la Blacklist Rank`)
 				}
 				client.guilds.cache.forEach(g => {
 					if (g.members.cache.get(member.id)) {
@@ -42,10 +44,13 @@ module.exports = {
 				});
 				db.set(`blrankmd_${client.user.id}_${member.id}`, true)
 
-				message.channel.send(`${member.username} est maintenant dans la Blacklist Rank`)
+				message.channel.send(`**${member.tag}** à été ajouté à la blacklist rank.\nIl à été **ban** de **${client.guilds.cache.size}** serveur(s)\nJe n'ai pas pu le **ban** de 0 serveur\nil ne peut plus **recevoir de rôle sur les serveurs ou je me trouve**`)
+
+//##############################################################################################################################################################
+
 			} else if (args[0] === "clear") {
 				let tt = await db.all().filter(data => data.ID.startsWith(`blrankmd_${client.user.id}`));
-				message.channel.send(`${tt.length === undefined||null ? 0:tt.length} ${tt.length > 1 ? "personnes ont été supprimées ":"personne a été supprimée"} de la blacklist Rank`)
+				message.channel.send(`**${tt.length === undefined||null ? 0:tt.length}** ${tt.length > 1 ? "personnes ont été supprimées ":"personne a été supprimée"} de la blacklist Rank`)
 
 
 				let ttt = 0;
@@ -53,6 +58,9 @@ module.exports = {
 					db.delete(tt[i].ID);
 					ttt++;
 				}
+
+//##############################################################################################################################################################
+            
 			} else if (args[0] === "remove") {
 
 				if (args[1]) {
@@ -68,11 +76,14 @@ module.exports = {
 					}
 					if (!member) return message.channel.send(`Aucun membre trouvé pour \`${args[1]|| " "}\``)
 					if (db.get(`blrankmd_${client.user.id}_${member.id}`) === null) {
-						return message.channel.send(`${member.username} n'est pas dans la blacklist Rank`)
+						return message.channel.send(`**${member.tag}** n'est pas dans la blacklist Rank`)
 					}
 					db.delete(`blrankmd_${client.user.id}_${member.id}`)
-					message.channel.send(`${member.username} n'est plus dans la blacklist Rank`)
+					message.channel.send(`**${member.tag}** à été retiré de la blacklist rank.\nIl à été **unban** de **${client.guilds.cache.size}** serveur(s)\nJe n'ai pas pu le **unban** de 0 serveur\nil peut de nouveau **recevoir des rôles sur les serveurs ou je me trouve**`)
 				}
+
+//##############################################################################################################################################################
+
 			} else if (args[0] === "list") {
 
 
