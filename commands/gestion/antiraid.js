@@ -279,7 +279,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "anuaddrole") {
@@ -298,7 +298,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -334,7 +334,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -362,7 +362,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -431,7 +431,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "delroleanu") {
@@ -450,7 +450,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -486,7 +486,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -514,7 +514,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -583,7 +583,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "delrolemod") {
@@ -602,7 +602,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -638,7 +638,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -666,7 +666,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -735,7 +735,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "annulerrole") {
@@ -754,7 +754,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -790,7 +790,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -818,7 +818,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -887,7 +887,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "delweb") {
@@ -906,7 +906,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -942,7 +942,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -970,7 +970,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1039,7 +1039,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "anuupdate") {
@@ -1058,7 +1058,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -1094,7 +1094,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1122,7 +1122,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1191,7 +1191,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "channelcdel") {
@@ -1210,7 +1210,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -1246,7 +1246,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1274,7 +1274,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1343,7 +1343,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "channelmoddel") {
@@ -1362,7 +1362,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -1398,7 +1398,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1426,7 +1426,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1502,7 +1502,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "banlimit") {
@@ -1513,7 +1513,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1527,7 +1527,7 @@ module.exports = {
 												max: 1,
 												timeout: 30000
 											}).catch(() => {
-												message.channel.send("Trop long")
+												//message.channel.send("Trop long")
 											})
 											const CollectedWbSanc2 = responseWbSanc2.first()
 											const lowercase2 = CollectedWbSanc2.content.toLowerCase()
@@ -1563,7 +1563,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -1599,7 +1599,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1627,7 +1627,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1698,7 +1698,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 
@@ -1718,7 +1718,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -1754,7 +1754,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1787,7 +1787,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1853,7 +1853,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "tokenlimit") {
@@ -1864,7 +1864,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -1878,7 +1878,7 @@ module.exports = {
 												max: 1,
 												timeout: 30000
 											}).catch(() => {
-												message.channel.send("Trop long")
+												//message.channel.send("Trop long")
 											})
 											const CollectedWbSanc2 = responseWbSanc2.first()
 											const lowercase2 = CollectedWbSanc2.content.toLowerCase()
@@ -1914,7 +1914,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -1981,7 +1981,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "limittoken") {
@@ -1992,7 +1992,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -2028,7 +2028,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -2105,7 +2105,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "decolimit") {
@@ -2116,7 +2116,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -2130,7 +2130,7 @@ module.exports = {
 												max: 1,
 												timeout: 30000
 											}).catch(() => {
-												message.channel.send("Trop long")
+												//message.channel.send("Trop long")
 											})
 											const CollectedWbSanc2 = responseWbSanc2.first()
 											const lowercase2 = CollectedWbSanc2.content.toLowerCase()
@@ -2166,7 +2166,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -2202,7 +2202,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -2230,7 +2230,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -2299,7 +2299,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "channeldelanu") {
@@ -2318,7 +2318,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -2354,7 +2354,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -2382,7 +2382,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -2451,7 +2451,7 @@ module.exports = {
 							return message.channel.send(embedantiraid, inter).then(async m => {
 								setTimeout(() => {
 									m.delete()
-									return message.channel.send(`Trop long`)
+									//return message.channel.send(`Trop long`)
 								}, 60000 * 5)
 								client.on("clickButton", async button => {
 									if (button.id === message.id + "antibotanu") {
@@ -2470,7 +2470,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbCr = responseWbCr.first()
 										const lowercase = CollectedWbCr.content.toLowerCase()
@@ -2506,7 +2506,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
@@ -2534,7 +2534,7 @@ module.exports = {
 											max: 1,
 											timeout: 30000
 										}).catch(() => {
-											message.channel.send("Trop long")
+											//message.channel.send("Trop long")
 										})
 										const CollectedWbSanc = responseWbSanc.first()
 										const lowercase = CollectedWbSanc.content.toLowerCase()
