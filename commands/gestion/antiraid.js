@@ -39,7 +39,9 @@ module.exports = {
 				db.set(`massban_${message.guild.id}`, true);
 				db.set(`massbansanction_${message.guild.id}`, "ban")
 				db.set(`massbanwl_${message.guild.id}`, true)
+
 				db.set(`link_${message.guild.id}`, true);
+
 				db.set(`webhook_${message.guild.id}`, true)
 				db.set(`webhooksanction_${message.guild.id}`, "ban")
 				db.set(`webhookwl_${message.guild.id}`, true)
@@ -119,6 +121,8 @@ module.exports = {
 				db.set(`massban_${message.guild.id}`, true);
 				db.set(`massbansanction_${message.guild.id}`, "ban")
 				db.set(`massbanwl_${message.guild.id}`, true)
+
+				db.set(`link_${message.guild.id}`, true);
 
 				db.set(`webhook_${message.guild.id}`, true);
 				db.set(`webhooksanction_${message.guild.id}`, "ban")
