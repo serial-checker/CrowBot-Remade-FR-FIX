@@ -38,20 +38,20 @@ module.exports = {
 			message.channel.send("Chargement...").then((msggg) => {
 				db.set(`massban_${message.guild.id}`, true);
 				db.set(`massbansanction_${message.guild.id}`, "ban")
-				db.set(`massbanwl_${message.guild.id}`, true)
+				db.set(`massbanwl_${message.guild.id}`, null)
 
 				db.set(`link_${message.guild.id}`, true);
 
 				db.set(`webhook_${message.guild.id}`, true)
 				db.set(`webhooksanction_${message.guild.id}`, "ban")
-				db.set(`webhookwl_${message.guild.id}`, true)
+				db.set(`webhookwl_${message.guild.id}`, null)
 
 				db.set(`rolescreate_${message.guild.id}`, true);
-				db.set(`rolescreatesanction_${message.guild.id}`, "derank")
+				db.set(`rolescreatesanction_${message.guild.id}`, "ban")
 				db.set(`rolescreatewl_${message.guild.id}`, null)
 
 				db.set(`rolesdel_${message.guild.id}`, true);
-				db.set(`rolesdelsanction_${message.guild.id}`, "derank")
+				db.set(`rolesdelsanction_${message.guild.id}`, "ban")
 				db.set(`rolesdelwl_${message.guild.id}`, null)
 
 				db.set(`rolesmod_${message.guild.id}`, true);
@@ -63,11 +63,11 @@ module.exports = {
 				db.set(`rolesaddwl_${message.guild.id}`, null)
 
 				db.set(`channelscreate_${message.guild.id}`, true);
-				db.set(`channelscreatesanction_${message.guild.id}`, "derank")
+				db.set(`channelscreatesanction_${message.guild.id}`, "ban")
 				db.set(`channelscreatewl_${message.guild.id}`, null)
 
 				db.set(`channelsdel_${message.guild.id}`, true);
-				db.set(`channelsdelsanction_${message.guild.id}`, "derank")
+				db.set(`channelsdelsanction_${message.guild.id}`, "ban")
 				db.set(`channelsdelwl_${message.guild.id}`, null)
 
 				db.set(`channelsmod_${message.guild.id}`, true);
@@ -76,18 +76,18 @@ module.exports = {
 
 				db.set(`update_${message.guild.id}`, true);
 				db.set(`updatesanction_${message.guild.id}`, "derank")
-				db.set(`updatewl_${message.guild.id}`, true)
+				db.set(`updatewl_${message.guild.id}`, null)
 
 				db.set(`bot_${message.guild.id}`, true);
 				db.set(`botsanction_${message.guild.id}`, "ban")
-				db.set(`botwl_${message.guild.id}`, true)
+				db.set(`botwl_${message.guild.id}`, null)
 
 				db.set(`antideco_${message.guild.id}`, true);
 				db.set(`antidecosanction_${message.guild.id}`, "derank")
-				db.set(`antidecowl_${message.guild.id}`, true)
+				db.set(`antidecowl_${message.guild.id}`, null)
 
 				db.set(`antitoken_${message.guild.id}`, true)
-				db.get(`crealimit_${message.guild.id}`, true)
+				db.set(`crealimit_${message.guild.id}`, true)
 				db.set(`crealimittemps_${message.guild.id}`, ms("1d"))
 
 
