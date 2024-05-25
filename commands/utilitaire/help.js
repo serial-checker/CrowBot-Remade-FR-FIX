@@ -159,7 +159,7 @@ module.exports = {
 				if (2 <= perm) util.addField(`\`${prefix}roleinfo <rôle>\``, "Permet de d'avoir des informations sur un rôle")
 			util.addField(`\`${prefix}serverinfo [guild]\``, "Permet de d'avoir des informations sur un serveur où ce trouve le bot")
 			util.addField(`\`${prefix}snipe\``, "Permet de voir le dernier message supprimés")
-			util.addField(`\`${prefix}top [rank]\``, "Permet de voir un classement sois d'invitations, sois de rank")
+			util.addField(`\`${prefix}top [rank]\``, "Permet de voir un classement des ranks")
 			util.addField(`\`${prefix}userinfo [user]\``, "Permet de d'avoir des informations sur un utilisateur")
 			util.addField(`\`${prefix}support\``, "Donne une invitation pour le serveur de support bot")
 				if (1 <= perm) util.addField(`\`${prefix}voice [info all/all]\``, "Permet de voir des informations sur les les membres en vocal sur le serveur")
