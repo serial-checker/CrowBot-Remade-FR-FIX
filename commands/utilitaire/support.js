@@ -23,9 +23,9 @@ module.exports = {
 
             const embed = new Discord.MessageEmbed()
             embed.setTitle(`Besoin d'aide ?`)
-            embed.setURL('https://discord.gg/pepper-shop')
+            embed.setURL('https://discord.gg/aXQkZekKjh')
             embed.setColor(color)
-            embed.setDescription(`Pour Rejoindre Le Serveur Support [Clique ICI](https://discord.gg/pepper-shop)`)
+            embed.setDescription(`Pour Rejoindre Le Serveur Support [Clique ICI](https://discord.gg/aXQkZekKjh)`)
             embed.setTimestamp()
             embed.setFooter(`${message.guild.name}`)
 
