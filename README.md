@@ -45,7 +45,7 @@ Après avoir fait tout cela, vous pouvez enfin lancer le CrowBot Remade en ouvra
 ```
 Si vous avez vraiment besoin d'aide après tout ces consignes merci de rejoinre le serveur discord dédié à ce script spécifique
 ```
-Lien Du Serveur Discord : (Soon...) https://discord.gg/aXQkZekKjh
+Lien Du Serveur Discord : (Soon...) [Server Support](https://discord.gg/JDB6M45C9E)
 
 # Credits
 ```
