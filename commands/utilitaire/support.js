@@ -22,12 +22,12 @@ module.exports = {
 		if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm || db.get(`channelpublic_${message.guild.id}_${message.channel.id}`) === true) {
 
             const embed = new Discord.MessageEmbed()
-            embed.setTitle(`Besoin d'aide ?`)
-            embed.setURL('https://discord.gg/aXQkZekKjh')
+            //embed.setTitle(`Besoin d'aide ?`)
+            //embed.setURL('https://discord.gg/aXQkZekKjh')
             embed.setColor(color)
-            embed.setDescription(`Pour Rejoindre Le Serveur Support [Clique ICI](https://discord.gg/aXQkZekKjh)`)
-            embed.setTimestamp()
-            embed.setFooter(`${message.guild.name}`)
+            embed.setDescription(`[Cliquez pour rejoindre le support](https://discord.gg/aXQkZekKjh)`)
+            //embed.setTimestamp()
+            //embed.setFooter(`${message.guild.name}`)
 
             message.channel.send(embed)
 
