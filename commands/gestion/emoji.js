@@ -38,7 +38,7 @@ module.exports = {
 						.catch((error) => {
 							;
 						});
-					message.channel.send(`1 emoji créé`).catch((e) => {
+					message.channel.send(`l'émoji à belle et bien été àjouté au serveur`).catch((e) => {
 						;
 					});
 
@@ -49,7 +49,7 @@ module.exports = {
 						assetType: "png",
 					});
 					if (!CheckEmoji[0])
-						return message.channel.send(`Ceci n'est pas un emoji`);
+						return message.channel.send(`Ceci n'est pas un émoji valide`);
 
 				}
 
@@ -60,7 +60,7 @@ module.exports = {
 				if (!message.guild.emojis.cache.get(emoji.id)) return message.channel.send(`Cette emoji n'est pas sur ce serveur`);
 				emoji = message.guild.emojis.cache.get(emoji.id)
 				emoji.delete().then(() => {
-					message.channel.send(`1 emoji surppimé`)
+					message.channel.send(`l'émoji à belle et bien été supprimé du serveur`)
 
 				})
 
