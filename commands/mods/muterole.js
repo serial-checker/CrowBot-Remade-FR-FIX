@@ -42,7 +42,8 @@ module.exports = {
 						channel.createOverwrite(muterole, {
 							SEND_MESSAGES: false,
 							CONNECT: false,
-							ADD_REACTIONS: false
+							ADD_REACTIONS: false,
+							SPEAK: false
 						}, "Muterole")
 						embed2.setDescription(`**__D'autres permission déjà existantes peuvent rendre innefficace le mute pour certains rôles dans les salons suivants :__**\n\n**${channel.name}**\n- ${muterole.name}\n`, true)
 						embed2.setFooter(`${client.config.name} Tous les rôles ayant la permissons \"envoyer des messages\" en vert seront insensible au mute`)
@@ -67,7 +68,8 @@ module.exports = {
 					message.guild.channels.cache.forEach(channel => channel.createOverwrite(muterole, {
 						SEND_MESSAGES: false,
 						CONNECT: false,
-						ADD_REACTIONS: false
+						ADD_REACTIONS: false,
+						SPEAK: false
 					}, "Muterole"))
 					db.set(`mRole_${message.guild.id}`, `${muterole.id}`)
 					const e = new Discord.MessageEmbed()
