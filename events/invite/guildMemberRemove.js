@@ -49,7 +49,7 @@ module.exports = async (client, member) => {
 		if (member.user.bot && welcomeChannel) return welcomeChannel.send(`Le bot ${member.toString()} nous a quitter, il avait rejoins en utilisant ***l'api OAuth2***`).catch(err => {});
 		let user = db.get(`inviter_${member.guild.id}_${member.id}`);
 		if (user === null && welcomeChannel) return welcomeChannel.send(`**${member.user.tag}** a quitter le serveur, mais **je n'arrive pas à trouver** comment il l'avait rejoint.`);
-		if (user === 'vanity' && welcomeChannel) return welcomeChannel.send(`**${member.user.tag}** nous a quitter il avais rejoint en utilisant ***le lien d'invitation personnalisé du serveur.**`);
+		if (user === 'vanity' && welcomeChannel) return welcomeChannel.send(`**${member.user.tag}** nous a quitter il avais rejoint en utilisant ***le lien d'invitation personnalisé du serveur.***`);
 		let iv2 = await client.users.fetch(user).catch(err => {});
 		let inv = db.fetch(`invites_${member.guild.id}_${user}`);
 		if (inv == null) inv = 0
