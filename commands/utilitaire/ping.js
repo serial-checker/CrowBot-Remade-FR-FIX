@@ -40,7 +40,7 @@ module.exports = {
 			let msg = await message.channel.send(embeed)
 			let embed = new Discord.MessageEmbed()
 			//embed.setTitle("")
-			embed.addField("Ping API Discord :", `${msg.createdAt - message.createdAt + "ms"}`, true)
+			embed.addField("Discord Api :", `${msg.createdAt - message.createdAt + "ms"}`, true)
 			embed.addField(`Latence : ${client.user.username}`, `${client.ws.ping}ms`, true)
 			embed.setColor(color)
 			embed.setTimestamp()
