@@ -25,7 +25,7 @@ module.exports = {
             //embed.setTitle(`Besoin d'aide ?`)
             //embed.setURL('https://discord.gg/gUM6n9hCUs')
             embed.setColor(color)
-            embed.setDescription(`[Cliquez pour rejoindre le support](https://discord.gg/gUM6n9hCUs)`)
+            embed.setDescription(`[Cliquez pour rejoindre le support](https://discord.gg/2BvuJ9mnFd)`)
             //embed.setTimestamp()
             //embed.setFooter(`${message.guild.name}`)
 
