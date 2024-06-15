@@ -18,7 +18,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
 
             embed.setTitle(`Information à Propos De : ${client.user.username}`)
-            embed.setURL('https://discord.gg/gUM6n9hCUs')
+            embed.setURL('https://discord.gg/2BvuJ9mnFd')
             embed.setDescription('**Une description complète et détaillée du bot**')
             embed.setColor(color)
             .setThumbnail(message.author.avatarURL({ dynamic:true }));
@@ -29,7 +29,7 @@ module.exports = {
                 { name: '🔌 Latence Ping Bot :', value: `\`${client.ws.ping}Ms\`` },
                 { name: '🚀 Total Server(s) :', value: `\`${client.guilds.cache.size}\``, inline: true },
                 { name: '👥 Total User(s) :', value: `\`${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)}\``, inline: true },
-                { name: '📞 Support :', value: `[Clique ICI Pour Rejoindre Le Support](https://discord.gg/gUM6n9hCUs)`, inline: true },
+                { name: '📞 Support :', value: `[Clique ici pour rejoindre le support](https://discord.gg/2BvuJ9mnFd)`, inline: true },
                 { name: '📗 Node.js Version :', value: `\`${process.version}\``, inline: true },
                 { name: "📚 Discord.js Version :", value: `\`${Discord.version}\``, inline: true },
                 { name: "🟢 Uptime :", value: `<t:${(Date.now()-client.uptime).toString().slice(0, -3)}:R>`, inline: true }, 
