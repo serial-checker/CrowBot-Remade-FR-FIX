@@ -66,7 +66,7 @@ module.exports = {
 
 			let roleEmbed = new Discord.MessageEmbed()
 				.setColor(color)
-				.setTitle(role.name)
+				//.setTitle(role.name)
 				.addField("Nom ", `<@&${role.id}>`)
 				.addField("Membres possédant le rôle", `${role.members.size}`)
 				.addField("Couleur", `${role.hexColor === "#000000" ? "Classique" : role.hexColor}`)
