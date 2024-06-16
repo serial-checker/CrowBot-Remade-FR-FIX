@@ -40,18 +40,19 @@ module.exports = {
                 })
             })
             const voiceConnectedEmbed = new Discord.MessageEmbed()
-                .setTitle(`__${message.guild.name} ➔ Statistiques__`)
-                .setURL('https://discord.gg/2BvuJ9mnFd')
-                //.setThumbnail(guild.iconURL({dynamic: true}))
+                //.setTitle(`<a:100animosite_fleur:1251662459958460509> ${message.guild.name} __Statistiques !__`)
+                .setAuthor(`${message.guild.name} Statistiques !`, 'https://www.image-heberg.fr/files/17184964951637652956.gif')
+                //.setURL('https://discord.gg/2BvuJ9mnFd')
+                .setThumbnail(guild.iconURL({dynamic: true}))
                 .setDescription(`
-- ${message.guild.memberCount > 1 ? '*Membres*' : '*Membre*'} *sur le serveur :* **${message.guild.memberCount}** <:serial_membre:1220474644004339713>
-- ${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size > 1 ? '*Membres*' : '*Membre*'} *en ligne :* **${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size}** <a:serial_terre:1220445710223151217>
-- ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Membres*' : '*Membre*'} *en vocal :* **${message.guild.members.cache.filter(m => m.voice.channel).size}** <:serial_vocal:1217007411068669963>
-- ${message.guild.premiumSubscriptionCount > 1 ? '*Nombre*' : '*Nombres*'} *de boosts :* **${message.guild.premiumSubscriptionCount}** <a:serial_boost:1217008346662699098>
+${message.guild.memberCount > 1 ? '*Membres:*' : '*Membre:*'} **${message.guild.memberCount}**
+${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size > 1 ? '*En Lignes:*' : '*En Ligne:*'} **${message.guild.members.cache.filter(m => m.user.presence.status !== 'offline').size}**
+${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*En Vocals:*' : '*En Vocal:*'} **${message.guild.members.cache.filter(m => m.voice.channel).size}**
+${message.guild.premiumSubscriptionCount > 1 ? '*Boost:*' : '*Boosts:*'} **${message.guild.premiumSubscriptionCount}**
 `)
                 .setColor(color)
                 .setTimestamp()
-                .setFooter(`${message.guild.name} #Statistiques`)
+                //.setFooter(`${message.guild.name} #Statistiques`)
 
                 if (guild.icon) voiceConnectedEmbed.setThumbnail(guild.iconURL({
                     dynamic: true
@@ -61,12 +62,13 @@ module.exports = {
         } else if (!args[1]) {
             let embed = new Discord.MessageEmbed()
                 .setTimestamp()
-				.setTitle(`__${message.guild.name} ➔ Statistiques Salon Vocaux__`)
-				.setURL('https://discord.gg/2BvuJ9mnFd')
+				//.setTitle(`<a:100animosite_fleur:1251662459958460509> ${message.guild.name} __Statistiques Vocal !__`)
+                .setAuthor(`${message.guild.name} Statistiques Vocal !`, 'https://www.image-heberg.fr/files/17184964951637652956.gif')
+				//.setURL('https://discord.gg/2BvuJ9mnFd')
 				.setThumbnail(guild.iconURL({dynamic: true}))
-                .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:serial_vocal:1217007411068669963>`)
+                .setDescription(`**${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Personnes actuellement en* **Vocals**' : '*Personnes actuellement en* **Vocal**'}`)
                 .setColor(color)
-                .setFooter(`${message.guild.name} #Statistiques`)
+                //.setFooter(`${message.guild.name} #Statistiques`)
 
             message.channel.send(embed)
 
@@ -91,30 +93,32 @@ module.exports = {
                         })
                     })
                     const voiceConnectedEmbed = new Discord.MessageEmbed()
-                        .setTitle(`__${message.guild.name} ➔ Statistiques__`)
-                        .setURL('https://discord.gg/2BvuJ9mnFd')
+                        //.setTitle(`<a:100animosite_fleur:1251662459958460509> ${message.guild.name} __Statistiques Activité Vocal !__`)
+                        .setAuthor(`${message.guild.name} _Statistiques Activité Vocal !`, 'https://www.image-heberg.fr/files/17184964951637652956.gif')
+                        //.setURL('https://discord.gg/2BvuJ9mnFd')
                         .setThumbnail(guild.iconURL({dynamic: true}))
                         .setDescription(` 
-- **${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Personnes*' : '*Personne*'} *en vocal.* <:serial_vocal:1217007411068669963>
-- **${mutedMic}** ${mutedMic > 1 ? '*Personnes*' : '*Personne*'} *sont mute micro.* <:serial_mutemicro:1217038600039039026>
-- **${mutedCount}** ${mutedCount > 1 ? '*Personnes*' : '*Personne*'} *sont mute casque.* <:serial_mutecasque:1217038590744330272>
-- **${streamingCount}** ${streamingCount > 1 ? '*Personnes*' : '*Personne*'} *sont en stream.* <:serial_streaming:1217038609518035034>
-- **${cameraCount}** ${cameraCount > 1 ? '*Personnes*' : '*Personne*'} *sont en caméra.* <:serial_camera:1217038618603032596> 
+**${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Personnes actuellement en* **Vocal**' : '*Personnes actuellement en* **Vocal**'}
+**${mutedMic}** ${mutedMic > 1 ? '*Personnes*' : '*Personne*'} *Sont mute* **Micro**
+**${mutedCount}** ${mutedCount > 1 ? '*Personnes*' : '*Personne*'} *Sont mute* **Casque**
+**${streamingCount}** ${streamingCount > 1 ? '*Personnes*' : '*Personne*'} *Sont en* **Stream**
+**${cameraCount}** ${cameraCount > 1 ? '*Personnes*' : '*Personne*'} *Sont en* **Caméra**
 `)
                         .setColor(color)
                         .setTimestamp()
-                        .setFooter(`${message.guild.name} #Statistiques`)
+                        //.setFooter(`${message.guild.name} #Statistiques`)
 
                     return message.channel.send(voiceConnectedEmbed)
                 } else if (!args[1]) {
                     let embed = new Discord.MessageEmbed()
                         .setTimestamp()
-                        .setTitle(`__${message.guild.name} ➔ Statistiques__`)
-                        .setURL('https://discord.gg/2BvuJ9mnFd')
-			.setThumbnail(guild.iconURL({dynamic: true}))
-                        .setDescription(`- *Il y à actuellement* **${message.guild.members.cache.filter(m => m.voice.channel).size} ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? 'Personnes' : 'Personne'}** *en vocal sur le serveur.* <:serial_vocal:1217007411068669963>`)
+                        //.setTitle(`<a:100animosite_fleur:1251662459958460509> ${message.guild.name} __Statistiques Vocal !__`)
+                        .setAuthor(`${message.guild.name} Statistiques Vocal !`, 'https://www.image-heberg.fr/files/17184964951637652956.gif')
+                        //.setURL('https://discord.gg/2BvuJ9mnFd')
+			            .setThumbnail(guild.iconURL({dynamic: true}))
+                        .setDescription(`**${message.guild.members.cache.filter(m => m.voice.channel).size}** ${message.guild.members.cache.filter(m => m.voice.channel).size  > 1 ? '*Actuellement en* **Vocals**' : '*Actuellement en* **Vocal**'}`)
                         .setColor(color)
-                        .setFooter(`${message.guild.name} #Statistiques`)
+                        //.setFooter(`${message.guild.name} #Statistiques`)
 
                     message.channel.send(embed)
                 }
