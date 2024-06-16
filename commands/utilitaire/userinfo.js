@@ -48,7 +48,7 @@ module.exports = {
 
 				const UserInfo = new Discord.MessageEmbed()
 
-					.setTitle(user.user.tag)
+					.setTitle(user.user.username)
 					.setDescription(`Présent sur ce serveur depuis le <t:${parseInt(user.joinedTimestamp / 1000 )}:d>\nCompte créé le <t:${parseInt(user.user.createdTimestamp / 1000)}:d>\nServeur en commun: **${nm}**`)
 					.setThumbnail(user.user.displayAvatarURL({
 						dynamic: true
@@ -61,7 +61,7 @@ module.exports = {
 
 				const UserInfo = new Discord.MessageEmbed()
 
-					.setTitle(user.user.tag)
+					.setTitle(user.user.username)
 					.setDescription(`Présent sur ce serveur depuis le <t:${parseInt(user.joinedTimestamp / 1000 )}:d>\nCompte créé le <t:${parseInt(user.user.createdTimestamp / 1000)}:d>\nServeur en commun: **${nm}**`)
 					.setThumbnail(user.user.displayAvatarURL({
 						dynamic: true
