@@ -26,19 +26,19 @@ module.exports = {
 			});
 			if (bannerUrl) {
 				const Embed = new Discord.MessageEmbed()
-				Embed.setTitle(`Cette Bannière Et Incroyable !!!`);
-				Embed.setDescription(`Voici La Bannière De <@${member.id}>`)
+				Embed.setTitle(`${member.username}`);
+				//Embed.setDescription(`Voici La Bannière De <@${member.id}>`)
 				Embed.setImage(`${bannerUrl}`);
-				Embed.setFooter(`${client.config.name}`)
-				Embed.setTimestamp()
+				//Embed.setFooter(`${client.config.name}`)
+				//Embed.setTimestamp()
 				Embed.setColor(color)
 				message.channel.send(Embed)
 			} else {
 				const Embed = new Discord.MessageEmbed()
 				Embed.setTitle(`${member.username}`);
-				Embed.setDescription(`<@${member.id}> Ne Possédez Pas De Bannière`);
-				Embed.setFooter(`${client.config.name}`)
-				Embed.setTimestamp()
+				Embed.setDescription(`<@${member.id}> Ne possède pas de bannière`);
+				//Embed.setFooter(`${client.config.name}`)
+				//Embed.setTimestamp()
 				Embed.setColor(color)
 				message.channel.send(Embed)
 			}
