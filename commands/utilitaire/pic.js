@@ -22,7 +22,7 @@ module.exports = {
 			const member = client.users.cache.get(use.id)
 			const Embed = new Discord.MessageEmbed()
 
-			Embed.setTitle(`${message.author.tag}`);
+			Embed.setTitle(`${member.username}`);
 			//Embed.setDescription(`Voici La Photo De Profil De <@${member.id}>`)
 			Embed.setImage(`${member.displayAvatarURL({  dynamic: true })}`);
 			//Embed.setTimestamp()
