@@ -19,11 +19,13 @@ module.exports = {
 			if (db.get(`admin_${message.guild.id}_${role.id}`)) perm = true
 		})
 		if (client.config.owner.includes(message.author.id) || db.get(`ownermd_${client.user.id}_${message.author.id}`) === true || perm || db.get(`channelpublic_${message.guild.id}_${message.channel.id}`) === true) {
+            
 			const use = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author
 			const member = client.users.cache.get(use.id)
 			const bannerUrl = await getUserBannerUrl(member.id, client, {
 				size: 4096
 			});
+            
 			if (bannerUrl) {
 				const Embed = new Discord.MessageEmbed()
 				Embed.setTitle(`${member.username}`);
