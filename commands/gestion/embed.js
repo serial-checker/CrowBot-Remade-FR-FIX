@@ -300,9 +300,8 @@ module.exports = {
                                 SELAMq.delete()
                                 if(collected.first().mentions.users.size <= 0) {
                                     auteur = collected.first().content;
-                                    const question2 = await message.channel.send("Voulez-vous ajouter un **Avatar** a votre Author, sinon entrez `non`").then(msg => msg.delete({
-                                        timeout: 10000
-                                    }));
+                                    const question2 = await message.channel.send("Voulez-vous ajouter un **Avatar** a votre Author, sinon entrez `non`")
+                                    
                                     const auteurImg = (await message.channel.awaitMessages(filter, {
                                         max: 1,
                                         time: 60000,
