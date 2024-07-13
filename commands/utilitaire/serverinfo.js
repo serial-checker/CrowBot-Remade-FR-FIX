@@ -41,7 +41,7 @@ module.exports = {
 			//console.log(NoRoles)
 			const ServerInfo = new Discord.MessageEmbed()
 				.setTitle(`${guild.name} `)
-				.setURL("https://discord.gg/2BvuJ9mnFd")
+				.setURL("https://discord.gg/xNmW5MWDT3")
 				.addField(`Identifiant Serveur:`, `__**${guild.id}**__`, true)
 				.addField(`Niveau de vérification:`, `__**${verificationLevels[message.guild.verificationLevel]}**__`, true)
 				.addField(`Nombre de membre(s):`, `__**${guild.memberCount}**__`, true)
