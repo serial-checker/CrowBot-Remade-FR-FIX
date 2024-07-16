@@ -109,7 +109,7 @@ module.exports = {
 				embed.setTitle(`Liste des sanctions de ${user.username}・Total de sanctions : (**${number}**)`)
 					.setDescription(warnInfo
 						.map(r => r)
-						.map((m, i) => `${i + 1}・**ID Sanction :** \__${m.id}\__ **Staff :** \__${m.moderator}\__ **Raison :** \__${m.reason}\__ **Date :** <t:${m.date}>`)
+						.map((m, i) => `${i + 1})・**ID Sanction :** \__${m.id}\__ **Staff :** \__${m.moderator}\__ **Raison :** \__${m.reason}\__ **Date :** <t:${m.date}>`)
 						.slice(0, 5)
 
 					)
@@ -141,7 +141,7 @@ module.exports = {
 									.setTitle(`Liste des sanctions de ${user.username}・Total de sanctions : (**${number}**)`)
 									.setDescription(warnInfo
 										.map(r => r)
-										.map((m, i) => `${i + 1}・**ID Sanction :** \__${m.id}\__ **Staff :** \__${m.moderator}\__ **Raison :** \__${m.reason}\__ **Date :** <t:${m.date}>`)
+										.map((m, i) => `${i + 1})・**ID Sanction :** \__${m.id}\__ **Staff :** \__${m.moderator}\__ **Raison :** \__${m.reason}\__ **Date :** <t:${m.date}>`)
 										.slice(0, 5)
 
 									)
@@ -171,7 +171,7 @@ module.exports = {
 
 								embed.setDescription(warnInfo
 										.map(r => r)
-										.map((m, i) => `${i + 1}・**ID Sanction :** \__${m.id}\__ **Staff :** \__${m.moderator}\__ **Raison :** \__${m.reason}\__ **Date :** <t:${m.date}>`)
+										.map((m, i) => `${i + 1})・**ID Sanction :** \__${m.id}\__ **Staff :** \__${m.moderator}\__ **Raison :** \__${m.reason}\__ **Date :** <t:${m.date}>`)
 										.slice(p0, p1)
 
 									)
@@ -197,7 +197,7 @@ module.exports = {
 
 								embed.setDescription(warnInfo
 										.map(r => r)
-										.map((m, i) => `${i + 1}・**ID Sanction :** \__${m.id}\__ **Staff :** \__${m.moderator}\__ **Raison :** \__${m.reason}\__ **Date :** <t:${m.date}>`)
+										.map((m, i) => `${i + 1})・**ID Sanction :** \__${m.id}\__ **Staff :** \__${m.moderator}\__ **Raison :** \__${m.reason}\__ **Date :** <t:${m.date}>`)
 										.slice(p0, p1)
 
 									)
