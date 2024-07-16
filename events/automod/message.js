@@ -76,7 +76,7 @@ module.exports = async (client, message) => {
 
 
 				db.push(`info.${message.guild.id}.${message.author.id}`, {
-					moderator: `Moi`,
+					moderator: `Bot`,
 					reason: "Message Contenant un lien",
 					date: Date.parse(new Date) / 1000,
 					id: warnID
