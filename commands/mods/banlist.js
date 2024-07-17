@@ -43,7 +43,7 @@ module.exports = {
                     if (bList.length < 1) return message.channel.send(new Discord.MessageEmbed().setColor(color).setTitle("Aucun ban en cours"))
 
                     const embed = new Discord.MessageEmbed()
-                        .setTitle('Liste des membres bannis')
+                        .setTitle('Liste des utilisateurs bannis')
                         .setDescription(bans
                             .map(r => r)
                             .map((m, i) => `${i+1}) ${m.user} (${m.user.id})`)
@@ -51,7 +51,7 @@ module.exports = {
                         )
 
                         .setColor(color)
-                        .setFooter(`Total de membres bannis : ${bList.length} • ${client.config.name}`)
+                        .setFooter(`Total d'utilisateurs bannis : ${bList.length}`)
 
 
                     message.channel.send(embed).then(async tdata => {
@@ -77,7 +77,7 @@ module.exports = {
                                 tdata.edit("", {
                                     components: [],
                                     embed: new Discord.MessageEmbed()
-                                        .setTitle('Liste des membres bannis')
+                                        .setTitle('Liste des utilisateurs bannis')
                                         .setDescription(bans
                                             .map(r => r)
                                             .map((m, i) => `${i+1}) ${m.user} (${m.user.id})`)
@@ -85,7 +85,7 @@ module.exports = {
                                         )
 
                                         .setColor(color)
-                                        .setFooter(`Total de membres bannis : ${bList.length} • ${client.config.name}`)
+                                        .setFooter(`Total d'utilisateurs bannis : ${bList.length}`)
 
 
                                 })
@@ -115,7 +115,7 @@ module.exports = {
                                         )
 
                                         .setColor(color)
-                                        .setFooter(`Total de membres bannis : ${bList.length} • ${client.config.name}`)
+                                        .setFooter(`Total d'utilisateurs bannis : ${bList.length}`)
                                     tdata.edit(embed);
 
                                 }
@@ -142,7 +142,7 @@ module.exports = {
                                         )
 
                                         .setColor(color)
-                                        .setFooter(`Total de membres bannis : ${bList.length} • ${client.config.name}`)
+                                        .setFooter(`Total d'utilisateurs bannis : ${bList.length}`)
                                     tdata.edit(embed);
 
                                 }
