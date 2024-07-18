@@ -12,7 +12,7 @@ module.exports = (client, member, voiceChannel) => {
 	if (logschannel) logschannel.send(new Discord.MessageEmbed()
 		.setColor(color)
 		.setDescription(`${member} a **arrété son partage** dans <#${voiceChannel.id}>`)
-		.setFooter(`${client.config.name}`)
+		//.setFooter(`${client.config.name}`)
 		.setTimestamp()
 	)
 }
