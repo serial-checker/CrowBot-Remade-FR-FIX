@@ -13,7 +13,7 @@ module.exports = async (client, member, channel) => {
 
 		.setColor(color)
 		.setDescription(`${member} se **connecte au salon** <#${channel.id}>`)
-		.setFooter(`${client.config.name}`)
+		//.setFooter(`${client.config.name}`)
 		.setTimestamp()
 	)
 }
