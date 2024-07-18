@@ -12,7 +12,7 @@ module.exports = async (client, member, channel) => {
 	if (logschannel) logschannel.send(new Discord.MessageEmbed()
 
 		.setColor(color)
-		.setDescription(`${member} Quitte le **salon vocal** <#${channel.id}>`)
+		.setDescription(`${member} quitte **le salon** <#${channel.id}>`)
 		.setFooter(`${client.config.name}`)
 		.setTimestamp()
 	)
