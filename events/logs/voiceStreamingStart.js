@@ -11,7 +11,7 @@ module.exports = (client, member, voiceChannel) => {
     
 	if (logschannel) logschannel.send(new Discord.MessageEmbed()
 		.setColor(color)
-		.setDescription(`${member} **Partage sont stream** dans <#${voiceChannel.id}>`)
+		.setDescription(`${member} **partage son écran** dans <#${voiceChannel.id}>`)
 		.setFooter(`${client.config.name}`)
 		.setTimestamp()
 	)
