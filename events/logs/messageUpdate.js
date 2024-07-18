@@ -12,10 +12,10 @@ module.exports = async (client, oldMessage, newMessage) => {
     
 	if (logschannel) logschannel.send(new Discord.MessageEmbed()
 		.setColor(color)
-		.setAuthor(`Message modifié`)
-		.setDescription(`${oldMessage.author} À modifié sont message dans <#${oldMessage.channel.id}>`)
-		.addField(`Ancien message :`, `${oldMessage.content} **(embed)**`)
-		.addField(`Nouveau message :`, `${newMessage.content} **(embed)**`)
-		.setFooter(`${client.config.name}`)
+		//.setAuthor(`Message édité`)
+		.setDescription(`**Message édité dans** <#${oldMessage.channel.id}>`)
+		.addField(`Avant`, `${oldMessage.content}`)
+		.addField(`Après`, `${newMessage.content}`)
+		//.setFooter(`${client.config.name}`)
 		.setTimestamp())
 }
