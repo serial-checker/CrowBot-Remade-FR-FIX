@@ -3,7 +3,7 @@ const db = require("quick.db")
 const Discord = require("discord.js");
 const ms = require("ms")
 
-module.exports = async (client, oldMessage, newMessage) => {
+module.exports = async (client, oldMessage, newMessage, message) => {
 
 	let guild = oldMessage.guild
 	const color = db.get(`color_${guild.id}`) === null ? client.config.color : db.get(`color_${guild.id}`)
@@ -12,8 +12,8 @@ module.exports = async (client, oldMessage, newMessage) => {
     
 	if (logschannel) logschannel.send(new Discord.MessageEmbed()
 		.setColor(color)
-		//.setAuthor(`Message édité`)
-		.setDescription(`**Message édité dans** <#${oldMessage.channel.id}> par ${message.author}`)
+        .setAuthor(`${oldMessage.author.username}`, oldMessage.author.displayAvatarURL({dynamic : true }))
+		.setDescription(`**Message édité dans** <#${oldMessage.channel.id}> par ${oldMessage.author}`)
 		.addField(`Avant`, `${oldMessage.content}`)
 		.addField(`Après`, `${newMessage.content}`)
 		//.setFooter(`${client.config.name}`)
