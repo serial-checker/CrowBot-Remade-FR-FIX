@@ -11,10 +11,10 @@ module.exports = (client, message) => {
 	const logschannel = message.guild.channels.cache.get(wass)
 
 	if (logschannel) logschannel.send(new Discord.MessageEmbed()
-        	.setColor(color)
-		//.setAuthor(`Message supprimé`)
-		.setDescription(`**Message supprimé** dans <#${message.channel.id}> par ${message.author}`)
-		.addField(`${message.content}`)
+        .setAuthor(`${message.author.username}`, message.author.displayAvatarURL({dynamic : true }))
+        .setColor(color)
+		.setDescription(`**Message supprimé** dans <#${message.channel.id}> par ${message.author}\n ${message.content}`)
+		//.addField(`${message.content}`, `ㅤㅤㅤㅤㅤㅤㅤ`)
 		//.setFooter(`${client.config.name}`)
 		.setTimestamp())
 }
