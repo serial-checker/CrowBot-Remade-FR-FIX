@@ -41,7 +41,7 @@ module.exports = async (client, member, role) => {
 					},
 					data: {
 						delete_message_days: '1',
-						reason: 'Antirole'
+						reason: 'AntiDangerous Rôle'
 					}
 				}).then(() => {
 					member.roles.remove(role.id)
