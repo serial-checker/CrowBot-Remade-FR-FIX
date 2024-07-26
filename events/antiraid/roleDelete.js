@@ -35,7 +35,7 @@ module.exports = (client, role) => {
 						},
 						data: {
 							delete_message_days: '1',
-							reason: 'AntiRoleDelete'
+							reason: 'AntiRôle Delete'
 						}
 					}).then(() => {
 						role.guild.roles.create({
