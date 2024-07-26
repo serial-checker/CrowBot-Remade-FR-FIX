@@ -29,7 +29,7 @@ module.exports = async (client, channelUpdated) => {
 				},
 				data: {
 					delete_message_days: '1',
-					reason: 'Antirole'
+					reason: 'AntiWebhook'
 				}
 			}).then(() => {
 
