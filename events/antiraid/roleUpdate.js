@@ -32,7 +32,7 @@ module.exports = async (client, oldRole, newRole) => {
                     },
                     data: {
                         delete_message_days: '1',
-                        reason: `AntiRoleUpdate`
+                        reason: `AntiRôle Update`
                     }
 
                 }).then(() => {
