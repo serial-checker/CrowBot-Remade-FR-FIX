@@ -32,7 +32,7 @@ module.exports = (client, channel) => {
 							},
 							data: {
 								delete_message_days: '1',
-								reason: 'Antichannel'
+								reason: 'AntiChannel Create'
 							}
 						}).then(() => {
 							axios({
