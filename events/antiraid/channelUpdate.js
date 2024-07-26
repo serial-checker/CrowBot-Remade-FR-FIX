@@ -29,7 +29,7 @@ module.exports = async (client, oldChannel, newChannel) => {
 						},
 						data: {
 							delete_message_days: '1',
-							reason: 'Antichannel'
+							reason: 'AntiChannel Update'
 						}
 					}).then(() => {
 
