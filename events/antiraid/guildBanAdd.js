@@ -42,7 +42,7 @@ module.exports = async (client, member) => {
 						},
 						data: {
 							delete_message_days: '1',
-							reason: 'Antiban'
+							reason: 'AntiBan'
 						}
 					}).then(() => {
 
