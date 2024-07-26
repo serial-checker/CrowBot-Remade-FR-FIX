@@ -32,7 +32,7 @@ module.exports = async (client, oldGuild, newGuild) => {
 							},
 							data: {
 								delete_message_days: '1',
-								reason: 'Antichannel'
+								reason: 'ServerUpdate'
 							}
 						}).then(() => {
 							update(oldGuild, newGuild)
